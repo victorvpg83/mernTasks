@@ -18,7 +18,7 @@ exports.createProject = async (req,res)=> {
         project.creator = req.user.id
 
         //save project
-        project.save()
+        await project.save()
         res.json(project)
     } catch (error) {
         console.log(error)
